@@ -264,6 +264,7 @@ function App() {
       </section>
 
       <footer>
+        <p style={{ margin: 0, paddingBottom: "12px", color: "white" }}>Este projeto está em constante atualização e pode receber atualizações a qualquer momento.</p>
         <p style={{ margin: 0, paddingBottom: "12px", color: "white" }}>Sugestões? Por favor, me envie um e-mail em <a style={{ color: "white" }} href="mailto:romulosousa17@gmail.com">romulosousa17@gmail.com</a></p>
       </footer>
 
