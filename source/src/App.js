@@ -159,7 +159,7 @@ function App() {
   function exibirLink(fonte,titulo, data, url) {
     let data_formatada = moment(data, "DD/MM/YYYY h:mm").fromNow();
 
-    return <li style={{marginBottom: 15}}><span style={{fontSize: 12 }}>{data_formatada} - </span>{fonte} - <a style={{ color: "white" }} href={url}>{titulo}</a></li>
+    return <li style={{marginLeft: 15, marginRight: 15,marginBottom: 15}}><span style={{fontSize: 12 }}>{data_formatada} - </span>{fonte} - <a style={{ color: "white" }} href={url}>{titulo}</a></li>
   }
 
   return (
