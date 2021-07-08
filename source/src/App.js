@@ -15,7 +15,8 @@ import {
   TwitterIcon,
   WhatsappIcon,
 } from "react-share";
-
+import moment from "moment-with-locales-es6"
+moment.locale('pt-br');
 
 const quote = "Veja o que acontece no seu salário se a reforma tributária passar!";
 const hashtag = "#reformatributaria";
@@ -35,16 +36,16 @@ var formatter = new Intl.NumberFormat('pt-BR', {
 
 function App() {
   const [animation, setAnimation] = useState(false)
-  
-  useEffect(()=>{
-    
-    
+
+  useEffect(() => {
+
+
     setInterval(() => {
       setAnimation(true)
       setAnimation(false)
     }, 10000);
-    
-  },[])
+
+  }, [])
 
 
   const [dados, setDados] = useState(
@@ -115,7 +116,7 @@ function App() {
       animationData: require("./lottie/arrow.json"),
     };
 
-    return <Lottie style={{ margin: "-32px"}} options={defaultOptions}
+    return <Lottie style={{ margin: "-32px" }} options={defaultOptions}
       height={120}
       width={120}
       isStopped={animation}
@@ -154,8 +155,15 @@ function App() {
     </>
   }
 
+
+  function exibirLink(fonte,titulo, data, url) {
+    let data_formatada = moment(data, "DD/MM/YYYY h:mm").fromNow();
+
+    return <li style={{marginBottom: 15}}><span style={{fontSize: 12 }}>{data_formatada} - </span>{fonte} - <a style={{ color: "white" }} href={url}>{titulo}</a></li>
+  }
+
   return (
-    <div className="App" style={{backgroundColor: "#2e333e"}}>
+    <div className="App" style={{ backgroundColor: "#2e333e" }}>
       <header className="App-header">
         <p>
           Digite o seu salário bruto*:
@@ -217,10 +225,25 @@ function App() {
         </div>
         {renderArrow()}
       </header>
+      <section style={{color: "white"}}>
+        <h3 style={{fontSize: "25px" }}>Últimas notícias</h3>
 
-      <section id="section05" style={{color:"white"}}>
-        <h3>O que é a reforma tributária?</h3>
-        <p style={{ position: "relative", textAlign: "justify", width: "90%", maxWidth: "600px", display: "inline-block", marginBottom: "70px", fontSize: 19 }}>
+        <p style={{ position: "relative", textAlign: "justify", display: "inline-block", marginBottom: "70px", fontSize: 19 }}>
+
+          <ul style={{marginRight: 15, marginLeft: 15,fontSize: "1.15em",margin: 0,padding: 0, listStyle: "none", textAlign: "left" }}>
+            {exibirLink("G1","Guedes diz que, se houver 'erro na dose', governo vai consertar reforma do Imposto de Renda", "05/07/2021 10h21", "https://g1.globo.com/politica/blog/valdo-cruz/post/2021/07/05/guedes-diz-que-se-houver-erro-na-dose-governo-vai-consertar-reforma-do-imposto-de-renda.ghtml?fbclid=IwAR07nvaqTOPfVJEygYLonGCNvXT75T7KwvpYuZRICr7X-vPrlQglqtCg2Po")}
+            {exibirLink("UOL","Reforma tributária: quem ganha R$ 4.500 pagaria R$ 1.057 a mais de IR", "03/07/2021 04h00", "https://economia.uol.com.br/noticias/redacao/2021/07/03/reforma-imposto-de-renda-tabela-declaracao-simplificada-irpf.htm?fbclid=IwAR2kvsxuU6N2ZWS35HoQYBuNrX480oDhqZ1vgoTKHrSbFTy_D4-yXEsUDBc")}
+            {exibirLink("G1","Mudanças no Imposto de Renda: veja os principais pontos da proposta do governo", "25/06/2021 14h34", "https://g1.globo.com/economia/noticia/2021/06/25/reforma-do-imposto-de-renda-veja-os-principais-pontos-da-proposta-do-governo.ghtml?fbclid=IwAR1-MYoiE9mlQ-4v32XD3fpH67jwWDoPsntDgjWeusCCubEyZE2e_i7DIwE")}
+          </ul>
+
+        </p>
+      </section>
+      <section id="section05" style={{ color: "white" }}>
+
+
+
+        <h3 style={{fontSize: "25px" }}>O que é a reforma tributária?</h3>
+        <p style={{marginLeft: "15px",marginRight: "15px", position: "relative", textAlign: "justify", width: "90%", maxWidth: "600px", display: "inline-block", marginBottom: "70px", fontSize: 19 }}>
           <span style={{ position: "absolute", top: "-28px", fontSize: "11px" }}>07/07/2021 às 00:28</span>
 
           O sistema tributário pode ser reformulado para aumentar ou diminuir os impostos arrecadados e/ou o valor fiscal arrecadado.
@@ -233,15 +256,15 @@ function App() {
           <br /><br />
           Vale lembrar que, de acordo com o site da Câmara dos Deputados, uma empresa brasileira precisa de 1.958 horas para pagar impostos, enquanto o tempo médio nos demais países é de apenas 206 horas.
 
-<br />
-(Em atualização constante)
+          <br />
+          (Em atualização constante)
 
         </p>
 
       </section>
 
       <footer>
-        <p style={{color:"white"}}>Sugestões? Por favor, me envie um e-mail em <a style={{color:"white"}} href="mailto:romulosousa17@gmail.com">romulosousa17@gmail.com</a></p>
+        <p style={{ margin: 0, paddingBottom: "12px", color: "white" }}>Sugestões? Por favor, me envie um e-mail em <a style={{ color: "white" }} href="mailto:romulosousa17@gmail.com">romulosousa17@gmail.com</a></p>
       </footer>
 
     </div>
