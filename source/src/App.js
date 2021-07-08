@@ -262,10 +262,14 @@ function App() {
         </p>
 
       </section>
-
-      <footer>
+      <section>
         <p style={{ margin: 0, paddingBottom: "12px", color: "white" }}>Este projeto está em constante atualização e pode receber atualizações a qualquer momento.</p>
         <p style={{ margin: 0, paddingBottom: "12px", color: "white" }}>Sugestões? Por favor, me envie um e-mail em <a style={{ color: "white" }} href="mailto:romulosousa17@gmail.com">romulosousa17@gmail.com</a></p>
+      </section>      
+      <footer style={{backgroundColor: "white"}}>
+        <br/>
+        <br/>
+      <div className="fb-comments" data-href="https://meusalariocomareforma.com.br/" data-width="" data-numposts="1" data-colorScheme="dark"></div>  
       </footer>
 
     </div>
