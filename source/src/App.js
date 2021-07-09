@@ -142,11 +142,11 @@ function App() {
     var texto = formatter.format(Math.abs(valor))
     let style = {};
     if (valor < 0) {
-      style = { color: "red" }
+      style = { color: "#f14545" }
       texto = "MENOS " + texto + " por ano!";
     }
     else {
-      style = { color: "green" }
+      style = { color: "#36af36" }
       texto = "MAIS " + texto + " por ano!";
     }
     return <>
