@@ -189,16 +189,18 @@ function App() {
           </ul>
           <b>Regras atuais</b>
           <ul style={{ textAlign: "left", listStyle: "none" }}>
-            <li>Imposto de Renda: {formatter.format(dados.IRRF)}</li>
+            <li>Imposto de Renda: {formatter.format(dados.IRRF)} </li>
             <li>Salário Líquido: {formatter.format(dados.salarioLiquido)}</li>
             <li>Restituição anual: {formatter.format(dados.restituicaoAntiga)}</li>
           </ul>
-          <b>Com a Proposta</b>
+          
+          {/* <b>Com a Proposta</b>
           <ul style={{ textAlign: "left", listStyle: "none" }}>
             <li>Imposto de Renda: {formatter.format(dados.IRRFProposta)}</li>
             <li>Salário Líquido: {formatter.format(dados.salarioLiquidoProposta)}</li>
             <li>Restituição anual: {formatter.format(dados.restituicaoNova)}</li>
-          </ul>
+          </ul> */}
+
         </div>
         <p style={{ fontSize: 10, marginTop: 50, position: "relative", bottom: 15 }}> *Os seus dados <b>NÃO</b> serão gravados e/ou armanezados neste site.<br />Respeitamos a sua privacidade.</p>
 
@@ -231,10 +233,11 @@ function App() {
         <p style={{ position: "relative", textAlign: "justify", display: "inline-block", marginBottom: "70px", fontSize: 19 }}>
 
           <ul style={{marginRight: 15, marginLeft: 15,fontSize: "1.15em",margin: 0,padding: 0, listStyle: "none", textAlign: "left" }}>
+            {exibirLink("G1","Câmara discute mudanças nas regras do Imposto de Renda", "04/08/2021 20h00", "https://g1.globo.com/politica/ao-vivo/camara-discute-mudancas-nas-regras-do-imposto-de-renda-assista.ghtml")}
+            {exibirLink("UOL","País está próximo de reformas tributária e administrativa, afirma Guedes...", "04/08/2021 15h50", "https://economia.uol.com.br/noticias/estadao-conteudo/2021/09/01/pais-esta-proximo-de-reformas-tributaria-e-administrativa-afirma-guedes.htm")}
             {exibirLink("Estadão","Em encontro com empresários, Guedes reconhece erro na dose da reforma tributária e promete correção.", "08/07/2021 22h28", "https://economia.estadao.com.br/noticias/geral,em-encontro-com-empresarios-guedes-diz-que-reforma-tributaria-nao-aumentara-impostos,70003773157")}
             {exibirLink("G1","Guedes diz que, se houver 'erro na dose', governo vai consertar reforma do Imposto de Renda", "05/07/2021 10h21", "https://g1.globo.com/politica/blog/valdo-cruz/post/2021/07/05/guedes-diz-que-se-houver-erro-na-dose-governo-vai-consertar-reforma-do-imposto-de-renda.ghtml?fbclid=IwAR07nvaqTOPfVJEygYLonGCNvXT75T7KwvpYuZRICr7X-vPrlQglqtCg2Po")}
             {exibirLink("UOL","Reforma tributária: quem ganha R$ 4.500 pagaria R$ 1.057 a mais de IR", "03/07/2021 04h00", "https://economia.uol.com.br/noticias/redacao/2021/07/03/reforma-imposto-de-renda-tabela-declaracao-simplificada-irpf.htm?fbclid=IwAR2kvsxuU6N2ZWS35HoQYBuNrX480oDhqZ1vgoTKHrSbFTy_D4-yXEsUDBc")}
-            {exibirLink("G1","Mudanças no Imposto de Renda: veja os principais pontos da proposta do governo", "25/06/2021 14h34", "https://g1.globo.com/economia/noticia/2021/06/25/reforma-do-imposto-de-renda-veja-os-principais-pontos-da-proposta-do-governo.ghtml?fbclid=IwAR1-MYoiE9mlQ-4v32XD3fpH67jwWDoPsntDgjWeusCCubEyZE2e_i7DIwE")}
           </ul>
 
         </p>
